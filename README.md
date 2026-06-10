@@ -50,7 +50,7 @@ Watsun Drugstore is an e-commerce web application. The application features a pr
 1. In Visual Studio, create App_Data folder and copy file path
 3. Go to **Tools** → **SQL Server Object Explorer**
 4. Right-click on **(LocalDB)** → **New Database**
-5. Name it: `WatsunDrugstore`
+5. Name it: `WatsunDB`
 6. Location: **paste file path here** 
 7. Right-click database → **New Query**
 8. Open and execute **SQL_Database_Setup.sql** file (in project root)
