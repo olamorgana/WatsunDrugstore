@@ -40,7 +40,7 @@ Watsun Drugstore is an e-commerce web application. The application features a pr
 2. Click **File** → **Clone repository**
 3. Paste repository URL:
    ```
-   https://github.com/olamorgana/WatsunDrugstore.git
+   https://github.com/YourUsername/WatsunDrugstore.git
    ```
 4. Choose folder location
 5. Click **Clone**
