@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "Shop Our Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- HEADER -->
+<div class="text-center mb-4">
+    <h2 class="display-6 fw-bold" style="color: #1a237e;">Shop Our Products</h2>
+    <p class="text-muted">Browse 35+ skincare, cosmetics, personal care & wellness items.</p>
+</div>
+
+<!-- SEARCH & FILTER BAR -->
+<div class="card mb-4 border-0 shadow-sm">
+    <div class="card-body">
+        <form method="get" asp-action="Index" asp-controller="Home">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-5">
+                    <label class="form-label fw-semibold">Search Product Name</label>
+                    <input type="text" name="searchName" class="form-control" placeholder="Enter product name..." value="@Context.Request.Query["searchName"]" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-semibold">Filter by Category</label>
+                    <select name="categoryFilter" class="form-select">
+                        <option value="">-- All Categories --</option>
+                        <option value="Skincare" selected="@(Context.Request.Query["categoryFilter"] == "Skincare" ? "selected" : null)">Skincare</option>
+                        <option value="Cosmetics & Beauty" selected="@(Context.Request.Query["categoryFilter"] == "Cosmetics & Beauty" ? "selected" : null)">Cosmetics & Beauty</option>
+                        <option value="Personal Care" selected="@(Context.Request.Query["categoryFilter"] == "Personal Care" ? "selected" : null)">Personal Care</option>
+                        <option value="Health & Wellness" selected="@(Context.Request.Query["categoryFilter"] == "Health & Wellness" ? "selected" : null)">Health & Wellness</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary w-100 fw-semibold">Filter Results</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- PRODUCT CARDS GRID - MOCKUP DATA (PERSON 2: Replace with @foreach when controller is ready) -->
+<div class="row g-4">
+    <!-- PRODUCT 1: Skincare -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="text-center p-3 bg-white">
+                <img src="~/images/the_ordinary_serum.jpg" alt="The Ordinary Serum" 
+                     class="img-fluid" style="height: 200px; object-fit: contain;"
+                     onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title fw-bold">The Ordinary Niacinamide 10%</h5>
+                <p class="card-text text-muted small">30ml high-vitamin and mineral blemish formula.</p>
+                <div class="mb-2">
+                    <span class="badge bg-info text-dark">Skincare</span>
+                    <span class="badge bg-success">15 in stock</span>
+                </div>
+                <h4 class="fw-bold mb-3" style="color: #7c4dff;">RM 35.00</h4>
+                <form method="post" asp-action="AddToCart" asp-controller="Cart">
+                    <input type="hidden" name="productId" value="1" />
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Qty</span>
+                        <input type="number" name="quantity" min="1" max="15" value="1" class="form-control text-center" />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 fw-semibold">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT 2: Cosmetics -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="text-center p-3 bg-white">
+                <img src="~/images/maybelline_mascara.jpg" alt="Maybelline Mascara" 
+                     class="img-fluid" style="height: 200px; object-fit: contain;"
+                     onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Maybelline Lash Sensational Mascara</h5>
+                <p class="card-text text-muted small">Waterproof full fan effect volume mascara.</p>
+                <div class="mb-2">
+                    <span class="badge bg-success">Cosmetics & Beauty</span>
+                    <span class="badge bg-success">24 in stock</span>
+                </div>
+                <h4 class="fw-bold mb-3" style="color: #7c4dff;">RM 42.90</h4>
+                <form method="post" asp-action="AddToCart" asp-controller="Cart">
+                    <input type="hidden" name="productId" value="2" />
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Qty</span>
+                        <input type="number" name="quantity" min="1" max="24" value="1" class="form-control text-center" />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 fw-semibold">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT 3: Personal Care -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="text-center p-3 bg-white">
+                <img src="~/images/shampoo.jpg" alt="Head & Shoulders" 
+                     class="img-fluid" style="height: 200px; object-fit: contain;"
+                     onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Head & Shoulders Anti-Dandruff 400ml</h5>
+                <p class="card-text text-muted small">Cool Menthol shampoo for clean and refreshed scalp.</p>
+                <div class="mb-2">
+                    <span class="badge bg-secondary">Personal Care</span>
+                    <span class="badge bg-danger">3 left</span>
+                </div>
+                <h4 class="fw-bold mb-3" style="color: #7c4dff;">RM 18.50</h4>
+                <form method="post" asp-action="AddToCart" asp-controller="Cart">
+                    <input type="hidden" name="productId" value="3" />
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Qty</span>
+                        <input type="number" name="quantity" min="1" max="3" value="1" class="form-control text-center" />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 fw-semibold">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUCT 4: Health & Wellness -->
+    <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm">
+            <div class="text-center p-3 bg-white">
+                <img src="~/images/vitamin_c.jpg" alt="Ester-C Vitamin C" 
+                     class="img-fluid" style="height: 200px; object-fit: contain;"
+                     onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'" />
+            </div>
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Ester-C Vitamin C 500mg</h5>
+                <p class="card-text text-muted small">50 Tablets for immune system booster support.</p>
+                <div class="mb-2">
+                    <span class="badge bg-warning text-dark">Health & Wellness</span>
+                    <span class="badge bg-success">40 in stock</span>
+                </div>
+                <h4 class="fw-bold mb-3" style="color: #7c4dff;">RM 55.00</h4>
+                <form method="post" asp-action="AddToCart" asp-controller="Cart">
+                    <input type="hidden" name="productId" value="4" />
+                    <div class="input-group mb-2">
+                        <span class="input-group-text">Qty</span>
+                        <input type="number" name="quantity" min="1" max="40" value="1" class="form-control text-center" />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100 fw-semibold">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*
+TODO PERSON 2: When controller passes List<Product>, replace mockup cards above with:
+
+@model List<WatsunDrugstore.Models.Product>
+
+<div class="row g-4">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <div class="text-center p-3 bg-white">
+                    <img src="~/images/products/@item.ImageFileName" alt="@item.Name" 
+                         class="img-fluid" style="height: 200px; object-fit: contain;"
+                         onerror="this.src='https://via.placeholder.com/300x200?text=No+Image'" />
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">@item.Name</h5>
+                    <p class="card-text text-muted small">@item.Description</p>
+                    <div class="mb-2">
+                        <span class="badge bg-info text-dark">@item.Category</span>
+                        @if (item.Stock <= 5)
+                        {
+                            <span class="badge bg-danger">@item.Stock left</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-success">@item.Stock in stock</span>
+                        }
+                    </div>
+                    <h4 class="fw-bold mb-3" style="color: #7c4dff;">RM @item.Price.ToString("F2")</h4>
+                    <form method="post" asp-action="AddToCart" asp-controller="Cart">
+                        <input type="hidden" name="productId" value="@item.ProductId" />
+                        <div class="input-group mb-2">
+                            <span class="input-group-text">Qty</span>
+                            <input type="number" name="quantity" min="1" max="@item.Stock" value="1" class="form-control text-center" />
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 fw-semibold">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+*@

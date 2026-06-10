@@ -1,0 +1,122 @@
+﻿/* ============================================
+   WATSUN DRUGSTORE - CUSTOM STYLES
+   Mint Purple + Navy Theme
+   ============================================ */
+
+body {
+    background-color: #f3f0ff;
+}
+
+/* Navbar - Navy */
+.navbar {
+    background-color: #1a237e !important;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Card styling - Mint purple accents */
+.card {
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+}
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px rgba(26, 35, 126, 0.15) !important;
+    }
+
+    /* Product images */
+    .card img {
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+    }
+
+/* Primary buttons - Mint purple */
+.btn-primary {
+    background-color: #7c4dff;
+    border-color: #7c4dff;
+}
+
+    .btn-primary:hover {
+        background-color: #651fff;
+        border-color: #651fff;
+    }
+
+/* Success buttons - Soft teal */
+.btn-success {
+    background-color: #00bfa5;
+    border-color: #00bfa5;
+}
+
+    .btn-success:hover {
+        background-color: #008e76;
+        border-color: #008e76;
+    }
+
+/* Outline primary - Mint purple */
+.btn-outline-primary {
+    color: #7c4dff;
+    border-color: #7c4dff;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #7c4dff;
+        border-color: #7c4dff;
+        color: white;
+    }
+
+/* Price styling - Mint purple */
+.text-primary {
+    color: #7c4dff !important;
+}
+
+/* Badges */
+.badge {
+    font-size: 0.8em;
+    padding: 0.5em 0.8em;
+    font-weight: 600;
+}
+
+/* Input group */
+.input-group-text {
+    background-color: #e8e0ff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-color: #d1c4e9;
+}
+
+/* Form controls - Mint purple focus */
+.form-control:focus,
+.form-select:focus {
+    border-color: #7c4dff;
+    box-shadow: 0 0 0 0.25rem rgba(124, 77, 255, 0.15);
+}
+
+/* Footer - Navy */
+footer {
+    margin-top: auto;
+    background-color: #1a237e;
+}
+
+/* Progress bars in admin */
+.progress {
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .display-5, .display-6 {
+        font-size: 1.8rem;
+    }
+
+    .card img {
+        height: 150px !important;
+    }
+}

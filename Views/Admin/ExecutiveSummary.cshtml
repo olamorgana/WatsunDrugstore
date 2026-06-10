@@ -1,0 +1,161 @@
+﻿@{
+    ViewData["Title"] = "Executive Summary";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- TODO PERSON 4: Add [Authorize(Roles = "Admin")] to controller action -->
+
+<div class="row mb-4 align-items-center">
+    <div class="col-md-8">
+        <h2 class="fw-bold text-dark">Executive Summary</h2>
+        <p class="text-muted mb-0">Top-level business performance overview.</p>
+    </div>
+    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <span class="badge bg-danger p-2 fs-6">Admin Only</span>
+    </div>
+</div>
+
+<!-- KPI CARDS -->
+<div class="row mb-4">
+    <div class="col-md-3 mb-3">
+        <div class="card bg-primary text-white border-0 shadow-sm p-3">
+            <small class="text-white-50 text-uppercase">Total Revenue</small>
+            <h3 class="fw-bold my-1">RM 5,420.50</h3>
+            <small class="text-white-50">All time</small>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card bg-success text-white border-0 shadow-sm p-3">
+            <small class="text-white-50 text-uppercase">Total Orders</small>
+            <h3 class="fw-bold my-1">42</h3>
+            <small class="text-white-50">Successful</small>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card bg-info text-white border-0 shadow-sm p-3">
+            <small class="text-white-50 text-uppercase">Total Customers</small>
+            <h3 class="fw-bold my-1">18</h3>
+            <small class="text-white-50">Registered</small>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card bg-warning text-dark border-0 shadow-sm p-3">
+            <small class="text-dark-50 text-uppercase">Products Sold</small>
+            <h3 class="fw-bold my-1">156</h3>
+            <small class="text-dark-50">Units</small>
+        </div>
+    </div>
+</div>
+
+<!-- CATEGORY BREAKDOWN -->
+<div class="row mb-4">
+    <div class="col-md-6 mb-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-dark text-white py-3">
+                <h5 class="mb-0 fw-semibold">Sales by Category</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fw-semibold">Skincare</span>
+                    <span class="fw-bold text-primary">RM 2,150.00 (40%)</span>
+                </div>
+                <div class="progress mb-3" style="height: 20px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 40%">40%</div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fw-semibold">Cosmetics & Beauty</span>
+                    <span class="fw-bold text-primary">RM 1,620.50 (30%)</span>
+                </div>
+                <div class="progress mb-3" style="height: 20px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 30%">30%</div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fw-semibold">Personal Care</span>
+                    <span class="fw-bold text-primary">RM 1,080.00 (20%)</span>
+                </div>
+                <div class="progress mb-3" style="height: 20px;">
+                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%">20%</div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fw-semibold">Health & Wellness</span>
+                    <span class="fw-bold text-primary">RM 570.00 (10%)</span>
+                </div>
+                <div class="progress" style="height: 20px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 10%">10%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-dark text-white py-3">
+                <h5 class="mb-0 fw-semibold">Top Selling Products</h5>
+            </div>
+            <div class="card-body">
+                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                    <span class="fw-semibold">1. The Ordinary Niacinamide</span>
+                    <span class="fw-bold text-success">45 sold</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                    <span class="fw-semibold">2. Maybelline Mascara</span>
+                    <span class="fw-bold text-success">38 sold</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                    <span class="fw-semibold">3. Ester-C Vitamin C</span>
+                    <span class="fw-bold text-success">32 sold</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom pb-2 mb-2">
+                    <span class="fw-semibold">4. Head & Shoulders Shampoo</span>
+                    <span class="fw-bold text-success">28 sold</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <span class="fw-semibold">5. CeraVe Cleanser</span>
+                    <span class="fw-bold text-success">22 sold</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- RECENT HIGH-VALUE ORDERS -->
+<div class="card border-0 shadow-sm">
+    <div class="card-header bg-dark text-white py-3">
+        <h5 class="mb-0 fw-semibold">High-Value Orders (RM 150+)</h5>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Total</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="fw-bold text-primary">#WTS-0042</td>
+                    <td>Ahmad Bin Ali</td>
+                    <td class="fw-bold text-success">RM 186.35</td>
+                    <td class="text-muted">08 June 2026</td>
+                </tr>
+                <tr>
+                    <td class="fw-bold text-primary">#WTS-0035</td>
+                    <td>Nurul Ain</td>
+                    <td class="fw-bold text-success">RM 245.00</td>
+                    <td class="text-muted">06 June 2026</td>
+                </tr>
+                <tr>
+                    <td class="fw-bold text-primary">#WTS-0028</td>
+                    <td>Jason Lee</td>
+                    <td class="fw-bold text-success">RM 178.90</td>
+                    <td class="text-muted">03 June 2026</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

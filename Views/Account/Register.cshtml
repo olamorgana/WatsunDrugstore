@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Customer Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm p-4 bg-white">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-primary">Create Account</h2>
+                <p class="text-muted">Join Watsun Drugstore to start shopping your favorite wellness items.</p>
+            </div>
+
+            <form method="post" asp-action="Register" asp-controller="Account">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold text-secondary">Full Name</label>
+                    <input type="text" name="fullName" class="form-control" placeholder="Enter your full name" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold text-secondary">Email Address</label>
+                    <input type="email" name="email" class="form-control" placeholder="name@example.com" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold text-secondary">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Create a strong password" required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label fw-semibold text-secondary">Confirm Password</label>
+                    <input type="password" name="confirmPassword" class="form-control" placeholder="Repeat your password" required />
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold text-secondary">Register As</label>
+                    <select name="role" class="form-select" required>
+                        <option value="Customer">Customer</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                    <small class="text-muted d-block mt-1">Note: Admin registration is enabled for assessment purposes.</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-bold shadow-sm mb-3">Register Account</button>
+
+                <div class="text-center">
+                    <span class="text-muted small">Already have an account? </span>
+                    <a href="/Account/Login" class="small fw-semibold text-decoration-none">Login Here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

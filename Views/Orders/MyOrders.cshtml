@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "My Orders";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="fw-bold text-primary">My Order History</h2>
+        <p class="text-muted">Track and review all your past purchases.</p>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-header bg-dark text-white py-3">
+        <h5 class="card-title mb-0 fw-semibold">All Orders</h5>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="table-light text-secondary">
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Total (RM)</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- MOCKUP ORDER 1 -->
+                <tr>
+                    <td class="fw-bold text-primary">#WTS-0042</td>
+                    <td class="text-muted">08 June 2026</td>
+                    <td>
+                        <span class="d-block text-muted small">The Ordinary Serum (x1)</span>
+                        <span class="d-block text-muted small">Maybelline Mascara (x2)</span>
+                        <span class="d-block text-muted small">Ester-C Vitamin C (x1)</span>
+                    </td>
+                    <td class="fw-bold">RM 186.35</td>
+                    <td><span class="badge bg-success">Delivered</span></td>
+                    <td class="text-center">
+                        <a href="/Orders/Details/42" class="btn btn-sm btn-outline-primary">View</a>
+                    </td>
+                </tr>
+
+                <!-- MOCKUP ORDER 2 -->
+                <tr>
+                    <td class="fw-bold text-primary">#WTS-0038</td>
+                    <td class="text-muted">05 June 2026</td>
+                    <td>
+                        <span class="d-block text-muted small">Head & Shoulders Shampoo (x2)</span>
+                    </td>
+                    <td class="fw-bold">RM 39.22</td>
+                    <td><span class="badge bg-warning text-dark">Processing</span></td>
+                    <td class="text-center">
+                        <a href="/Orders/Details/38" class="btn btn-sm btn-outline-primary">View</a>
+                    </td>
+                </tr>
+
+                <!-- MOCKUP ORDER 3 -->
+                <tr>
+                    <td class="fw-bold text-primary">#WTS-0025</td>
+                    <td class="text-muted">28 May 2026</td>
+                    <td>
+                        <span class="d-block text-muted small">Ester-C Vitamin C (x2)</span>
+                        <span class="d-block text-muted small">The Ordinary Serum (x1)</span>
+                    </td>
+                    <td class="fw-bold">RM 145.00</td>
+                    <td><span class="badge bg-success">Delivered</span></td>
+                    <td class="text-center">
+                        <a href="/Orders/Details/25" class="btn btn-sm btn-outline-primary">View</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="text-center mt-4">
+    <a href="/" class="btn btn-outline-primary fw-semibold">Continue Shopping</a>
+</div>

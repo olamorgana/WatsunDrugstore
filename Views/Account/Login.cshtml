@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "User Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card border-0 shadow-sm p-4 bg-white">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold text-primary">User Login</h2>
+                <p class="text-muted">Sign in to manage your cart or access the admin control panel.</p>
+            </div>
+
+            <div class="alert alert-info py-2 small mb-3 text-center" role="alert">
+                <strong>Demo Accounts:</strong> admin@watsun.com / customer@gmail.com
+            </div>
+
+            <form method="post" asp-action="Login" asp-controller="Account">
+                <div class="mb-3">
+                    <label class="form-label fw-semibold text-secondary">Email Address</label>
+                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required />
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-semibold text-secondary">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter your password" required />
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-bold shadow-sm mb-3">Secure Login</button>
+
+                <div class="text-center">
+                    <span class="text-muted small">New to Watsun? </span>
+                    <a href="/Account/Register" class="small fw-semibold text-decoration-none">Register Now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Order Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center mb-4">
+        <div class="display-1 text-success mb-3">O</div>
+        <h2 class="fw-bold text-success">Thank You For Your Order!</h2>
+        <p class="lead text-muted">Your transaction was successful. A digital official receipt has been generated below.</p>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card border border-2 border-dark shadow-sm p-4 bg-white">
+
+            <div class="row align-items-center border-bottom pb-3 mb-4">
+                <div class="col-sm-6 text-center text-sm-start mb-3 mb-sm-0">
+                    <h3 class="fw-bold text-primary mb-1">WATSUN DRUGSTORE</h3>
+                    <small class="text-muted d-block">UniKL MIIT</small>
+                    <small class="text-muted">Official Sales Receipt</small>
+                </div>
+                <div class="col-sm-6 text-center text-sm-end">
+                    <h5 class="fw-bold text-dark mb-1">RECEIPT NO: <span class="text-secondary">#WTS-2026-0042</span></h5>
+                    <small class="text-muted d-block">Date: @DateTime.Now.ToString("dd MMMM yyyy HH:mm")</small>
+                    <small class="text-muted">Payment: Cash On Delivery (COD)</small>
+                </div>
+            </div>
+
+            <div class="bg-light rounded p-3 mb-4">
+                <h6 class="fw-bold text-secondary mb-2">Deliver To:</h6>
+                <div class="text-dark fw-semibold mb-1">Jing Boran</div>
+                <div class="small text-muted">012-3456789</div>
+                <div class="small text-muted">Residensi RAH</div>
+            </div>
+
+            <h6 class="fw-bold text-secondary mb-3">Transaction Details:</h6>
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle">
+                    <thead class="table-secondary text-dark fw-bold">
+                        <tr>
+                            <th>Item Description</th>
+                            <th class="text-center" style="width: 80px;">Qty</th>
+                            <th class="text-end" style="width: 120px;">Unit Price</th>
+                            <th class="text-end" style="width: 130px;">Total (RM)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold d-block text-dark">The Ordinary Niacinamide 10%</span>
+                                <small class="text-muted">Skincare | 30ml</small>
+                            </td>
+                            <td class="text-center fw-semibold">1</td>
+                            <td class="text-end">35.00</td>
+                            <td class="text-end fw-semibold">35.00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold d-block text-dark">Maybelline Lash Sensational Mascara</span>
+                                <small class="text-muted">Cosmetics & Beauty | Waterproof</small>
+                            </td>
+                            <td class="text-center fw-semibold">2</td>
+                            <td class="text-end">42.90</td>
+                            <td class="text-end fw-semibold">85.80</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="fw-semibold d-block text-dark">Ester-C Vitamin C 500mg</span>
+                                <small class="text-muted">Health & Wellness | 50 Tablets</small>
+                            </td>
+                            <td class="text-center fw-semibold">1</td>
+                            <td class="text-end">55.00</td>
+                            <td class="text-end fw-semibold">55.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="table-light">
+                        <tr>
+                            <th colspan="3" class="text-end text-secondary fw-semibold">Subtotal:</th>
+                            <td class="text-end fw-semibold text-dark">175.80</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3" class="text-end text-secondary fw-semibold">Government Tax (6% SST):</th>
+                            <td class="text-end fw-semibold text-dark">10.55</td>
+                        </tr>
+                        <tr class="table-primary">
+                            <th colspan="3" class="text-end text-dark fw-bold fs-5">Grand Total Paid:</th>
+                            <td class="text-end fw-bold text-primary fs-5">RM 186.35</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="text-center mt-4 border-top pt-3">
+                <p class="mb-1 fw-semibold text-success">Payment Received via Cash on Delivery</p>
+                <p class="small text-muted mb-0">Thank you for shopping at Watsun Drugstore! Please bring this receipt for any return inquiries.</p>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-4 mb-5">
+            <a href="/" class="btn btn-primary px-4 fw-semibold shadow-sm">Back to Shop Catalog</a>
+        </div>
+    </div>
+</div>
