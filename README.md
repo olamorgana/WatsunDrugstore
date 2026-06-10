@@ -53,7 +53,7 @@ Watsun Drugstore is an e-commerce web application. The application features a pr
 5. Name it: `WatsunDB`
 6. Location: **paste file path here** 
 7. Right-click database → **New Query**
-8. Open and execute **SQL_Database_Setup.sql** file (in project root)
+8. Open and execute **SQLQuery1.sql** file (in project root)
 9. Wait for all tables and sample data to be created
    
 #### Step 3: Build Solution
